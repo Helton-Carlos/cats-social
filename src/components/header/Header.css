@@ -1,0 +1,17 @@
+.Top{
+    width: 100%;
+    height: 60px;
+    position: absolute;
+    background-color: white;
+    border-bottom: 1px solid #bdbdbd;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.container{
+    margin: 0 auto;
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top:10px ;
+}
