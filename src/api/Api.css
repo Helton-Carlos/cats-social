@@ -1,37 +1,54 @@
-input{
+h1 {
+    margin-bottom: 15px;
+}
+
+h1::before {
+    content: '';
+    width: 4px;
+    background-color: rgb(78, 0, 223);
+    padding: 4px;
+    margin-right: 5px;
+}
+
+input {
     width: 450px;
     border: none;
     border-radius: 5px;
     display: block;
     padding: 0.8rem;
-    margin: 12px 0;
+    margin: 5px 0 6px 0;
+    border: 2px solid rgb(231, 231, 231);
 }
 
-button{
-    width: 450px;
+input:focus {
+    outline: none;
+    border: 2px solid rgb(78, 0, 223);
+    color: rgb(78, 0, 223);
+}
+
+button {
     border: none;
-    border-radius: 25px;
-    padding: 0.8rem;
-    margin:7px 0;
-    background-color: rgb(143, 143, 143);
-    color:#4d4d4d;
-    font-weight: 700;
+    border-radius: 10px;
+    padding: 0.7rem;
+    margin: 15px 0;
+    background-color: rgb(78, 0, 223);
+    color: #fff;
+    font-weight: 400;
     font-size: medium;
     box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
 }
 
-button:hover{
-    background-color: rgb(78, 0, 223);
-    color:#fff;
+button:hover {
+    background-color: rgb(42, 0, 119);
 }
 
-.img{
+.img {
     width: auto;
     height: 100vh;
     overflow: hidden;
 }
 
-.form{
+.form {
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -39,20 +56,25 @@ button:hover{
 }
 
 @media screen and (max-width:930px) {
-    .img{
+    .img {
         display: none;
     }
 
-    .form{
+    h1 {
+        font-size: 25px;
+    }
+
+    .form {
         margin: 80px auto;
         padding: 10px;
     }
 
-    input, button{
+    input,
+    button {
         max-width: 280px;
     }
 
-    button{
+    button {
         padding: 0.7rem;
     }
 }

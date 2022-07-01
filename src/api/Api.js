@@ -9,11 +9,9 @@ const Api = () => {
   const [password, setPassword] = React.useState('')
 
   function upInputs(event) {
-    event.preventDefault();
     const login = { name, email, password }
 
     localStorage.setItem('login', JSON.stringify(login))
-    login = { name: '', email: '', password: ''}
   }
 
   return (
@@ -24,9 +22,16 @@ const Api = () => {
 
       <form onSubmit={upInputs} className='form'>
         <h1>Cats Social</h1>
-        <input type="text" value={name} placeholder="Digite seu nome:" onChange={(event) => setName(event.target.value)} />
-        <input type="email" value={email} placeholder="Digite seu e-mail:" onChange={(event) => setEmail(event.target.value)} />
-        <input type="password" value={password} placeholder="Digite seu password:" onChange={(event) => setPassword(event.target.value)} />
+
+        <label htmlFor='name'>Nome:</label>
+        <input id='name' type="text" value={name} placeholder="José santos Souza" onChange={(event) => setName(event.target.value)} />
+        
+        <label  htmlFor='email'>E-mail:</label>
+        <input id='email' type="email" value={email} placeholder="jose@gmail.com:" onChange={(event) => setEmail(event.target.value)} />
+       
+        <label  htmlFor='password'>Senha:</label>
+        <input id='password' type="password" value={password} placeholder="*********" onChange={(event) => setPassword(event.target.value)} />
+        
         <button>Enter the page</button>
       </form>
     </div>
