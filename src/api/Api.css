@@ -21,8 +21,8 @@ button{
 }
 
 button:hover{
-    background-color: rgb(223, 223, 0);
-    color:#080808;
+    background-color: rgb(78, 0, 223);
+    color:#fff;
 }
 
 .img{
@@ -36,4 +36,23 @@ button:hover{
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+@media screen and (max-width:930px) {
+    .img{
+        display: none;
+    }
+
+    .form{
+        margin: 80px auto;
+        padding: 10px;
+    }
+
+    input, button{
+        max-width: 280px;
+    }
+
+    button{
+        padding: 0.7rem;
+    }
 }

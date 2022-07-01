@@ -13,6 +13,7 @@ const Api = () => {
     const login = { name, email, password }
 
     localStorage.setItem('login', JSON.stringify(login))
+    login = { name: '', email: '', password: ''}
   }
 
   return (
